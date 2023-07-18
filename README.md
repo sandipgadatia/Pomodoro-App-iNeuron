@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Pomodoro App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+I have created this Pomodoro web application using ReactJS.
+
+## User Interface
+![image](https://github.com/sandipgadatia/Pomodoro-App-iNeuron/assets/139265781/5700250e-5b9e-49b6-aa20-8c086acd8792)
+![image](https://github.com/sandipgadatia/Pomodoro-App-iNeuron/assets/139265781/8a2370b7-7797-4889-bb5a-9563c48aeff5)
+
+## Technology Required
+ReactJS
+NodeJS
 
 ## Available Scripts
 

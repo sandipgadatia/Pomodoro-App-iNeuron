@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Timer from './components/Timer';
+import Settings from './components/Settings';
+import AppHeader from './components/AppHeader';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [workTime, setWorkTime] = useState(25);
+  const [breakTime, setBreakTime] = useState(5);
+
+  const handleWorkTimeChange = (newWorkTime) => {
+    setWorkTime(newWorkTime);
+  };
+
+  const handleBreakTimeChange = (newBreakTime) => {
+    setBreakTime(newBreakTime);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <AppHeader />
+      <Timer workTime={workTime} breakTime={breakTime} />
+      <Settings
+        workTime={workTime}
+        breakTime={breakTime}
+        onWorkTimeChange={handleWorkTimeChange}
+        onBreakTimeChange={handleBreakTimeChange}
+      />
     </div>
   );
-}
+};
 
 export default App;
